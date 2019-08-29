@@ -5,9 +5,9 @@ import ButtonPanel from './ButtonPanel'
 class App extends React.Component {
     render() {
         return (
-            <div id="app-container">
+            <div id="app-container" className="app-container">
                 <Display result="0"/>
-                <ButtonPanel />  
+                <ButtonPanel  />  
             </div>
             
         )
