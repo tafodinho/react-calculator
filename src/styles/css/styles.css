@@ -1,3 +1,7 @@
+p {
+  margin: 0px;
+  padding: 0px; }
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -11,6 +15,8 @@
     text-align: right;
     padding: 1px 10px;
     font-size: 60px; }
+    .app-container .display p {
+      margin-top: 15px; }
   .app-container .button-panel {
     justify-content: space-evenly; }
     .app-container .button-panel .group-1 .button, .app-container .button-panel .group-1 .long-button, .app-container .button-panel .group-2 .button, .app-container .button-panel .group-2 .long-button, .app-container .button-panel .group-3 .button, .app-container .button-panel .group-3 .long-button, .app-container .button-panel .group-4 .button, .app-container .button-panel .group-4 .long-button, .app-container .button-panel .group-5 .button, .app-container .button-panel .group-5 .long-button {
