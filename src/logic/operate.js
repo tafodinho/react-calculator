@@ -1,20 +1,20 @@
-// import Big from 'big'
+import Big from 'big-js'
+
 const operate = (numberOne, numberTwo, operation) => {
     if(operation === '-') {
-        return numberOne - numberTwo
+        return Big(numberOne).minus(numberTwo).c.join('')
     } else if ( operation === '+') {
-        return numberOne - numberTwo
+        return Big(numberOne).plus(numberTwo).c.join('')
     } else if ( operation === '*') {
-        return numberOne * numberTwo
-    } else if ( operation === '+') {
-        return numberOne - numberTwo
+        return Big(numberOne).times(numberTwo).c.join('')
     } else if ( operation === '/') {
-        return numberOne / numberTwo
+        return Big(numberOne).div(numberTwo).c.join('')
     } else if ( operation === '%') {
-        return numberOne % numberTwo
+        return Big(numberOne).mod(numberTwo).c.join('')
     } else {
-        alert("Invalid operation")
+        return "error"
     }
 }
 
 export default operate
+
