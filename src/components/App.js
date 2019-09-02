@@ -10,7 +10,7 @@ class App extends React.Component {
             total: null,
             next: null,
             operation: null,
-            result: null
+            concat: true
         }
         this.handleClick = this.handleClick.bind(this)
     }
@@ -21,9 +21,11 @@ class App extends React.Component {
         this.setState(nextState)
     }
     render() {
+        const result = this.state.next ? this.state.next : this.state.total
+        const operation = this.state.operation
         return (
             <div id="app-container" className="app-container">
-                <Display result={this.state.result}/>
+                <Display result={ result } opp={ operation }/>
                 <ButtonPanel clickHandler={ this.handleClick } />  
             </div>
             

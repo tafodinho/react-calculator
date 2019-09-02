@@ -1,4 +1,4 @@
-p {
+p, h1 {
     margin: 0px; 
     padding: 0px;
 }
@@ -14,9 +14,9 @@ p {
         font-weight: bold;
         text-align: right;
         padding: 1px 10px;
-        font-size: 60px;
         p {
-            margin-top: 15px;
+            // margin-top: 15px;
+            font-size: 30px;
         }
     }
     .button-panel {

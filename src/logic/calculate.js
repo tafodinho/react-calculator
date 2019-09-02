@@ -1,13 +1,13 @@
 import operate from './operate'
 
 const calculate = (data, btnName) => {
-    console.log(data)
     const operations = ['*', '/', '+', '-', '%']
     if(btnName === '=') {
-        data.total = operate(data.total, data.next, data.operation)
-        data.result = data.total
+        data.result = operate(data.total, data.next, data.operation)
+        data.total = data.result
         data.next = null 
         data.operation = null
+        data.concat = false
     } else if(btnName === '+/-') {
         data.total = data.total * -1
     } else if(btnName === 'AC') {
@@ -18,32 +18,28 @@ const calculate = (data, btnName) => {
     } else {
         if(operations.includes(btnName)) {
             if(data.total && data.next && data.operation) {
-                data.result += btnName
                 data.total = operate(data.total, data.next, data.operation)
                 data.next = null 
                 data.operation = btnName
-            } else if(data.total && !data.next) {
+            } else if(data.total && !data.next && !data.operation) {
                 data.operation = btnName
-                data.result += btnName
             }
+            data.concat = true
         } else {
             if(data.total && data.operation) {
                 if(data.next) {
                     data.next += btnName
-                    data.result += btnName
                 } else {
                     data.next = btnName
-                    data.result += btnName
                 }
             } else if(!data.operation) {
-                if(data.total) {
+                if(data.total && data.concat) {
                     data.total += btnName
-                    data.result += btnName
                 } else {
                     data.total = btnName
-                    data.result = btnName
                 }
             }
+            data.concat = true
         }
     }
     return data
