@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Display = (props) => {
     return (
@@ -9,4 +10,8 @@ const Display = (props) => {
     )
 }
 
+Display.propTypes = {
+    result: PropTypes.string.isRequired,
+    opp: PropTypes.string.isRequired
+}
 export default Display
