@@ -1,0 +1,28 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 0 auto; }
+  .app-container .display {
+    background: grey;
+    height: 100px;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    padding: 1px 10px;
+    font-size: 60px; }
+  .app-container .button-panel {
+    justify-content: space-evenly; }
+    .app-container .button-panel .group-1 .button, .app-container .button-panel .group-1 .long-button, .app-container .button-panel .group-2 .button, .app-container .button-panel .group-2 .long-button, .app-container .button-panel .group-3 .button, .app-container .button-panel .group-3 .long-button, .app-container .button-panel .group-4 .button, .app-container .button-panel .group-4 .long-button, .app-container .button-panel .group-5 .button, .app-container .button-panel .group-5 .long-button {
+      text-align: center;
+      color: black;
+      border: 1.5px solid grey;
+      font-size: 20px; }
+    .app-container .button-panel .group-1 .button, .app-container .button-panel .group-2 .button, .app-container .button-panel .group-3 .button, .app-container .button-panel .group-4 .button, .app-container .button-panel .group-5 .button {
+      height: 100px;
+      width: 25%; }
+    .app-container .button-panel .group-1 .long-button, .app-container .button-panel .group-2 .long-button, .app-container .button-panel .group-3 .long-button, .app-container .button-panel .group-4 .long-button, .app-container .button-panel .group-5 .long-button {
+      height: 100px;
+      width: 50%; }
+
+/*# sourceMappingURL=styles.css.map */
