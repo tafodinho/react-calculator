@@ -11,7 +11,7 @@ const Display = (props) => {
 }
 
 Display.propTypes = {
-    result: PropTypes.string.isRequired,
-    opp: PropTypes.string.isRequired
+    result: PropTypes.string,
+    opp: PropTypes.string
 }
 export default Display
