@@ -10,6 +10,9 @@ const calculate = (data, btnName) => {
         data.concat = false
     } else if(btnName === '+/-') {
         data.total = data.total * -1
+    } else if (btnName === '%') {
+        data.total = data.total / 100
+        data.concat = false
     } else if(btnName === 'AC') {
         data.total = null
         data.operation = null

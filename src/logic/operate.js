@@ -12,12 +12,7 @@ const operate = (numberOne, numberTwo, operation) => {
             return "error division by zero"
         }
         return String(Big(numberOne).div(numberTwo))
-    } else if ( operation === '%') {
-        if(numberTwo === '0') {
-            return "error division by zero"
-        }
-        return String(Big(numberOne).mod(numberTwo))
-    } else {
+    }  else {
         return "error"
     }
 }
