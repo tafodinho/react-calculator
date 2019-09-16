@@ -1,0 +1,42 @@
+p, h1 {
+    margin: 0px; 
+    padding: 0px;
+}
+.app-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    .display {
+        background: grey;
+        height: 100px;
+        color: white;
+        font-weight: bold;
+        text-align: right;
+        padding: 1px 10px;
+        p {
+            // margin-top: 15px;
+            font-size: 30px;
+        }
+    }
+    .button-panel {
+        justify-content: space-evenly;
+        
+        .group-1, .group-2, .group-3, .group-4, .group-5 {
+            .button, .long-button {
+                text-align: center;
+                color: black;
+                border: 1.5px solid grey;
+                font-size: 20px;
+            }
+            .button {
+                height: 100px;
+                width: 25%;
+            }
+            .long-button {
+                height: 100px;
+                width: 50%;
+            }
+        }
+    }
+}
