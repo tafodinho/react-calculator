@@ -25,7 +25,7 @@ class App extends React.Component {
         const operation = this.state.operation
         return (
             <div id="app-container" className="app-container">
-                <Display result={ result } opp={ operation }/>
+                <Display result={ result ? result.toString() : result } opp={ operation }/>
                 <ButtonPanel clickHandler={ this.handleClick } />  
             </div>
             

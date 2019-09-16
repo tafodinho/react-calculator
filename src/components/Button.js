@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Button = (props) => {
-    const {name} = props
+    const {name, color, special, clickHandler} = props
     return (
-        <button className={!props.special ? "button" : "long-button"} style={{background: props.color}} onClick={() => props.clickHandler(name)}>
+        <button className={!special ? "button" : "long-button"} style={{background: color}} onClick={() => clickHandler(name)}>
             {props.name}
         </button>
     )
